@@ -1,0 +1,126 @@
+/* General CSS Topics */
+/* Comment */
+/* Color */
+
+:root {
+    --button-color: #84713E;
+}
+
+header{
+    background-color: hsla(44, 69%, 94%, 0.485);
+    margin: auto;
+    height: 250px;
+    position: relative;
+}
+
+/* Unit */
+h1 {
+    text-align: center;
+    background-color: hsl(44, 60%, 13%);
+    color: #debf78;
+    font-size: 3em; /* Relative unit */
+    font-family: "Jacquard 24", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Box Model */
+section {
+    background-color: rgb(249, 245, 238);
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding-top: 4vh;
+    padding-right: 4vh;
+    padding-bottom: 4vh;
+    padding-left: 4vh;
+    border: 2px solid #C4A85D;
+    border-radius: 5mm;
+    width: 16cm;
+    min-width: 16cm;
+    display: static;
+}
+
+/* Text */
+h2 {
+    background-color: #debf78; /* Text background color */
+    text-decoration: underline; /* Text decoration */
+    text-align: center; /* Text alignment */
+}
+
+/* Display */
+main {
+    display: flex; /* Display property */
+    justify-content: space-around; /* Flexbox attribute */
+    align-items: center; /* Flexbox attribute */
+    flex-wrap: wrap; /* Flexbox attribute */
+}
+
+/* Sizing */
+img {
+    height: 400px; /* Height */
+    max-width: 100%; /* Maximum width */
+}
+
+/* Position */
+footer {
+    position: static;/* Position property */
+    bottom: 0;/* Position property */
+    width: 100%;/* Width */
+    background-color: hsl(44, 60%, 13%);/* Background color */
+    color: white;/* Text color */
+    text-align: center;/* Text alignment */
+    padding: 1rem 1rem 1rem 1rem;/* Padding */
+}
+
+/* Pseudo-class */
+button {
+    background-color: color(srgb 0.79 0.57 0.16);/* Background color */
+    color: color-mix(in srgb, #191303 90%, white);/* Text color */
+    padding: 10px 20px;/* Padding */
+    border-style: solid;
+    border-color: hsl(44, 60%, 13%);
+    border-width: 2px;
+    border-radius: 5px;/* Border radius */
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;/* Cursor */
+}
+
+button:hover {
+    background-color: var(--button-color, #a99357);/* Background color on hover */
+}
+
+button:active {
+    box-shadow: 2px 2px 5px rgb(78, 75, 74);
+}
+
+/* Flexbox */
+section>* {
+    flex-basis: 30%; /* Flexbox attribute */
+}
+
+/* Grid */
+form {
+    background-color: rgb(249 245 238);
+    padding: 20px 20px 20px 20px; /* Padding */
+    margin: 20px; /* Margin */
+    border-radius: 10px; /* Border radius */
+    display: grid;
+    /* Display property */
+    grid-template-columns: 1fr 1fr;
+    /* Grid template columns */
+    grid-template-rows: auto;
+    grid-gap: 80px;
+    /* Gap between grid items */
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+    main {
+        flex-direction: column; /* Flex direction */
+        flex-wrap: wrap;
+    }
+}
+
+/* Responsiveness */
