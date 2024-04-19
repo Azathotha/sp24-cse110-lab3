@@ -15,7 +15,6 @@ header{
 
 /* Unit */
 h1 {
-    text-align: center;
     background-color: hsl(44, 60%, 13%);
     color: #debf78;
     font-size: 3em;
@@ -40,7 +39,6 @@ section {
     border-radius: 5mm;
     width: 16cm;
     min-width: 6cm;
-    display: static;
 }
 
 /* Text */
@@ -66,21 +64,13 @@ main {
 }
 
 /* Sizing */
-img {
+img, video {
     display: block;
     margin: auto;
-    height: 400px;
-    /* Height */
-    max-width: 100%;
-    /* Maximum width */
+    height: auto;
 }
 
 audio {
-    display: block;
-    margin: auto;
-}
-
-video {
     display: block;
     margin: auto;
 }
@@ -185,7 +175,7 @@ form {
     /* Sizing */
     img {
         height: auto;
-        width: auto;
+        width: 19em;
     }
 
     video {
@@ -199,7 +189,7 @@ form {
 
     form {
         display: block;
-        margin: auto;
+        margin: 1em;
     }
 
     input {
@@ -208,8 +198,63 @@ form {
 
     textarea {
         height: auto;
-        width: 20em;
+        width: 18em;
+    }
+
+    fieldset {
+        margin: 1em;
     }
 }
 
-/* Responsiveness */
+/* CSS Selectors */
+.text-center {
+    text-align: center;
+    & > a {
+            color: rgb(255, 160, 71);
+    
+            &:hover,
+            &:focus {
+                color: rgb(92, 47, 0);
+                background-color: rgb(255, 61, 26);
+            }
+    }
+}
+
+#message {
+    opacity: 0.6;
+    background-image: url(source/hamham.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 15%;
+}
+
+a[href="#"] {
+    text-decoration: none;
+}
+
+main section {
+    display: static;
+}
+
+form>fieldset {
+    border: 2px solid #C4A85D;
+    border-radius: 10px;
+    border-style: dashed;
+}
+
+hr~section {
+    margin-top: 1em;
+}
+
+header+hr {
+    margin-top: 50px;
+}
+
+section#agenda {
+    display: block;
+}
+
+li:has(+ li){
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
