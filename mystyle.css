@@ -18,7 +18,8 @@ h1 {
     text-align: center;
     background-color: hsl(44, 60%, 13%);
     color: #debf78;
-    font-size: 3em; /* Relative unit */
+    font-size: 3em;
+    /* Relative unit */
     font-family: "Jacquard 24", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -38,57 +39,92 @@ section {
     border: 2px solid #C4A85D;
     border-radius: 5mm;
     width: 16cm;
-    min-width: 16cm;
+    min-width: 6cm;
     display: static;
 }
 
 /* Text */
 h2 {
-    background-color: #debf78; /* Text background color */
-    text-decoration: underline; /* Text decoration */
-    text-align: center; /* Text alignment */
+    background-color: #debf78;
+    /* Text background color */
+    text-decoration: underline;
+    /* Text decoration */
+    text-align: center;
+    /* Text alignment */
 }
 
 /* Display */
 main {
-    display: flex; /* Display property */
-    justify-content: space-around; /* Flexbox attribute */
-    align-items: center; /* Flexbox attribute */
-    flex-wrap: wrap; /* Flexbox attribute */
+    display: flex;
+    /* Display property */
+    justify-content: space-around;
+    /* Flexbox attribute */
+    align-items: center;
+    /* Flexbox attribute */
+    flex-wrap: wrap;
+    /* Flexbox attribute */
 }
 
 /* Sizing */
 img {
-    height: 400px; /* Height */
-    max-width: 100%; /* Maximum width */
+    display: block;
+    margin: auto;
+    height: 400px;
+    /* Height */
+    max-width: 100%;
+    /* Maximum width */
+}
+
+audio {
+    display: block;
+    margin: auto;
+}
+
+video {
+    display: block;
+    margin: auto;
 }
 
 /* Position */
 footer {
-    position: static;/* Position property */
-    bottom: 0;/* Position property */
-    width: 100%;/* Width */
-    background-color: hsl(44, 60%, 13%);/* Background color */
-    color: white;/* Text color */
-    text-align: center;/* Text alignment */
-    padding: 1rem 1rem 1rem 1rem;/* Padding */
+    position: static;
+    /* Position property */
+    bottom: 0;
+    /* Position property */
+    width: 100%;
+    /* Width */
+    background-color: hsl(44, 60%, 13%);
+    /* Background color */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Text alignment */
+    padding: 1rem 1rem 1rem 1rem;
+    /* Padding */
 }
 
 /* Pseudo-class */
 button {
-    background-color: color(srgb 0.79 0.57 0.16);/* Background color */
-    color: color-mix(in srgb, #191303 90%, white);/* Text color */
-    padding: 10px 20px;/* Padding */
+    display: inline;
+    background-color: color(srgb 0.79 0.57 0.16);
+    /* Background color */
+    color: color-mix(in srgb, #191303 90%, white);
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding */
     border-style: solid;
     border-color: hsl(44, 60%, 13%);
     border-width: 2px;
-    border-radius: 5px;/* Border radius */
+    border-radius: 5px;
+    /* Border radius */
     margin: 10px 10px 0px 0px;
-    cursor: pointer;/* Cursor */
+    cursor: pointer;
+    /* Cursor */
 }
 
 button:hover {
-    background-color: var(--button-color, #a99357);/* Background color on hover */
+    background-color: var(--button-color, #a99357);
+    /* Background color on hover */
 }
 
 button:active {
@@ -97,15 +133,19 @@ button:active {
 
 /* Flexbox */
 section>* {
-    flex-basis: 30%; /* Flexbox attribute */
+    flex-basis: 30%;
+    /* Flexbox attribute */
 }
 
 /* Grid */
 form {
     background-color: rgb(249 245 238);
-    padding: 20px 20px 20px 20px; /* Padding */
-    margin: 20px; /* Margin */
-    border-radius: 10px; /* Border radius */
+    padding: 20px 20px 20px 20px;
+    /* Padding */
+    margin: 20px;
+    /* Margin */
+    border-radius: 10px;
+    /* Border radius */
     display: grid;
     /* Display property */
     grid-template-columns: 1fr 1fr;
@@ -116,10 +156,59 @@ form {
 }
 
 /* Responsiveness */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
+    body {
+            background-size: 5%;
+            background-position: right 600px top 14.5em;
+        }
+    
+    header {
+            height: auto;
+            margin: auto;
+            padding: auto;
+            /* Reduce header height */
+    }
+    
     main {
-        flex-direction: column; /* Flex direction */
+        flex-direction: column;
+        /* Flex direction */
         flex-wrap: wrap;
+        display: block;
+    }
+
+    section {
+        width: auto;
+        margin: auto;
+        padding: auto;
+    }
+
+    /* Sizing */
+    img {
+        height: auto;
+        width: auto;
+    }
+
+    video {
+        width: 19em;
+        height: auto;
+    }
+
+    footer {
+        width: auto;
+    }
+
+    form {
+        display: block;
+        margin: auto;
+    }
+
+    input {
+        width: auto;
+    }
+
+    textarea {
+        height: auto;
+        width: 20em;
     }
 }
 
