@@ -98,7 +98,7 @@ button {
     display: inline;
     background-color: color(srgb 0.79 0.57 0.16);
     /* Background color */
-    color: color-mix(in srgb, #191303 90%, white);
+    color: color-mix(srgb, #191303 90%, white);
     /* Text color */
     padding: 10px 20px;
     /* Padding */
@@ -155,7 +155,6 @@ form {
     header {
             height: auto;
             margin: auto;
-            padding: auto;
             /* Reduce header height */
     }
     
@@ -169,7 +168,6 @@ form {
     section {
         width: auto;
         margin: auto;
-        padding: auto;
     }
 
     /* Sizing */
@@ -233,7 +231,7 @@ a[href="#"] {
 }
 
 main section {
-    display: static;
+    display: block;
 }
 
 form>fieldset {
